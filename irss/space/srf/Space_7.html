@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="cn" style="background-color:white; color:black" id="global">
+    <head>
+        <meta charset="utf-8">
+        <title>空间研究项目-文件|Space 7</title>
+        <link rel="stylesheet" href="../../../file/ms.css">
+        <link rel="stylesheet" href="../../../file/doc-common.css">
+        <link rel="stylesheet" href="../../file/srf-doc-style-base.css">
+        <link rel="stylesheet" href="../../file/srf-doc-style-common.css">
+        <style>
+        .password{
+            border-style:solid;
+            border-width:1px;
+            height: 135px;
+            width:400px;
+            padding:10px;
+            line-height:30px;
+        }
+        .password_line-height1{
+            line-height:45px;
+        }
+        .password_line-height2{
+            line-height:28px;
+        }
+        .password_input{
+            width:380px;
+            height:20px;
+        }
+        .password_register{
+            width:380px;
+            height:30px;
+        }
+        .password_line-height3{
+            line-height:40px;
+        }
+        .doc0-main-passage-level1-button{
+            border:none;
+            background-color:rgb(24, 24, 24);
+            color:white;
+            text-decoration:white solid;
+        }
+        .doc1-main-passage-level1-button{
+            border:none;
+            background-color:rgb(255, 255, 255);
+            color:rgb(0, 0, 0);
+            text-decoration:white solid;
+        }
+        .doc0{
+            border:solid white 1px;
+            background-color:rgb(24, 24, 24);
+            color:white;
+        }
+        .warning{
+            color:rgb(255, 33, 55);
+            background-color:rgb(255, 174, 182);
+            border:2px solid rgb(255, 71, 89);
+            padding:4px;
+            width:500px;
+            height: 150px;
+        }
+        .refreshButton{
+            border:none;
+            font-size: 26px;
+            color:rgb(255, 33, 55);
+            background-color:rgb(255, 174, 182);
+        }
+        .makeCentered{
+            position: absolute;
+            top: 50%;           /* 定位到视口 50% 位置 */
+            left: 50%;
+            transform: translate(-50%, -50%); /* 回退自身宽高的50% */
+        }
+        .level-border{
+            font-size:20px;
+            font-family:黑体;
+            border-style:solid;
+            border-width:2px;
+            border-color:black;
+            width:400px;
+            padding:5px;
+        }
+        .level-0{
+            color:chartreuse;
+            background-image:linear-gradient(70deg,green,chartreuse);
+        }
+        .level-1{
+            color:rgb(255, 255, 255);
+            background-image:linear-gradient(70deg,rgb(164, 164, 164),rgb(255, 255, 255));
+        }
+        .level-2{
+            color:rgb(255, 201, 25);
+            background-image:linear-gradient(70deg,rgb(77, 25, 11),rgb(255, 201, 25));
+        }
+        .level-3{
+            color:rgb(255, 25, 25);
+            background-image:linear-gradient(70deg,rgb(45, 0, 0),rgb(255, 25, 25));
+        }
+        .level-4{
+            color:rgb(109, 33, 129);
+            background-image:linear-gradient(70deg,rgb(32, 0, 40),rgb(78, 0, 97));
+        }
+        .level-unkown{
+            color:rgb(0, 0, 0);
+            background-image:linear-gradient(70deg,rgb(155, 155, 155),rgb(0, 0, 0));
+        }
+        .level-item{
+            font-size:14px;
+            line-height:100%;
+        }
+        .picture-border
+        {
+            border-width:1px;
+            border-style:solid;
+            background-color:#a06800;
+            width:200px;
+            text-align:center;
+            color:white;
+            border-color:black;
+        }
+        fieldset
+        {
+            border-width:1px;
+            border-color:black;
+            padding:2px;
+        }
+        header
+        {
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            font-size:23px;
+            border-style:solid;
+        	border-left-style:none;
+        	border-right-style:none;
+        	border-top-style:none;
+            border-width:1px;
+            padding:5px;
+        }
+        
+        /*
+        body{
+            background-color:rgb(24, 24, 24);
+            color:white;
+        }
+        */
+        </style>
+    </head>
+    <body>
+        <div class="center-flex"><div>
+            <div id="doc0" style="display:none">
+                <header style="display:grid; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(1,1fr); background-color:black;"><a href="list.html" target="_self" style="color:aquamarine; text-decoration-line:none;">SRF</a></header>
+                <br>
+                <br>
+                <br>
+                <fieldset class="srf_common-doc">
+                    <a href="./list.html">← return</a>
+                    <h1>Space 7</h1>
+                    <fieldset style="border-color:white; background-color:black; color:red">
+                        警告：此文档为SRF最高机密，请已授权人员验证身份。
+                    </fieldset>
+                    <br>
+                    
+                    <div class="password">
+                        <div id="doc0_password_page1" style="display: inline">
+                            <span style="font-size:25px">身份验证系统</span><br>
+                            <div style="text-align:center" class="password_line-height1">
+                                <div class="password_line-height2">
+                                    <input id="doc0_input_user" type="text" placeholder="用户名" class="password_input"><br>
+                                    <input id="doc0_input_password" type="password" placeholder="密码" class="password_input">
+                                </div>
+                                <button onclick="doc0_password_register_click()" class="password_register">登录</button>
+                            </div>
+                        </div>
+
+                        <div id="doc0_password_page2" style="display: none; font-size:25px" class="password_line-height3">
+                            验证通过<br>
+                            欢迎您，<span id="doc0_password_page2_name"></span>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="doc0_main_passage_level1" style="display:none;">
+                        <div  id="doc0_main_passage_level1_button_open" style="display:inline;">
+                            <button onclick="doc0_main_passage_level1_button_open()" class="doc0-main-passage-level1-button" style="font-size:15px;"> > 打开文档</button>
+                        </div>
+                        <div id="doc0_main_passage_level1_button_close" style="display:none;">
+                            <button onclick="doc0_main_passage_level1_button_close()" class="doc0-main-passage-level1-button" style="font-size:15px;">v 关闭文档</button>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="doc0_main_passage_level2" style="display:none;">
+                            <div class="level-border level-unknown">
+                                <span style="font-size:18px;">
+                                    安全等级:<br>
+                                    未定<br>
+                                </span>
+                                <br>
+                                <div class="level-item">
+                                    -不稳定<br>
+                                    -无实体<br>
+                                    -变化无常<br>
+                                </div> 
+                            </div>
+                            <br>
+                            <div class="text width textborder_2 doc0">
+                                <h2>录音 · Space 7创建记录</h2>
+                                <hr>
+                                <p>录音开始：█████年██月██日 核心工程部</p>
+                                <p>[背景电流声持续56秒后]</p>
+                                <br>
+                                <p>中枢AI（第1次播报）：空间拓扑锚点注入失败，████坐标出现非欧几里德畸变</p>
+                                <p>低沉的男声：关闭所有弦共振器！能量过载突破300%阈值！</p>
+                                <p>颤抖的女声：西侧控制台的维度标尺...正在液化！</p>
+                                <p>[剧烈的金属撕裂声]</p>
+                                <br>
+                                <p>中枢AI（第2次播报）：检测到空间断层在子模块B2扩张</p>
+                                <p>沙哑的男声：启动紧急隔离程序，立刻切断所有外部能量链接！</p>
+                                <p>扭曲的声源：你们不该...观测...██████...</p>
+                                <p>[3名操作员医疗撤离警报]</p>
+                                <br>
+                                <p>中枢AI（第3次播报）：量子泡沫呈现非线性振荡</p>
+                                <p>带着哭腔的女声：所有观测仪器都在显示不同的物理常数！</p>
+                                <p>苍老的男声：放弃当前框架，重新加载基础空间模型</p>
+                                <p>[数据板过载爆炸声]</p>
+                                <br>
+                                <p>中枢AI（第4次播报）：检测到逻辑反噬突破收容</p>
+                                <p>绝望的男声：主控室墙体在产生无限镜像！快启动信息过滤器！</p>
+                                <p>回响的男声：第五次...必须第五次...</p>
+                                <p>[███Hz的耳鸣持续11秒]</p>
+                                <br>
+                                <p>中枢AI（第5次播报）：能量核心同步率91.4%</p>
+                                <p>嘶哑的女声：所有稳定系数突然恢复正常？这不可能...</p>
+                                <p>颤抖的男声：保持当前参数，准备写入空间初始条件！</p>
+                                <p>[蜂鸣声转为稳定的G大调和弦]</p>
+                                <br>
+                                <p>中枢AI（最终播报）：Space 7进入暂时性稳态</p>
+                                <p>混杂着抽泣的男声：我们...是不是造出了不该存在的...</p>
+                                <p>[录音终止于持续2分17秒的雨声]</p>
+
+                                <h2>录音 · Space 7探索记录</h2>
+                                <hr>
+                                <p>[气闸室循环系统嗡鸣]</p>
+                                <p>王哥（敲击舱壁）：第七次自检完成，准备开启过渡舱。</p>
+                                <p>小刘（呼吸急促）：面罩显示屏在闪雪花点！这正常吗？</p>
+                                <p>杨姐（轻笑）：去年B组遇到过整个头盔变马赛克的状况。</p>
+                                <p>张明（电子提示音）：外部重力读数0.3G，建议启用磁力靴。</p>
+                            
+                                <p>王哥（金属碰撞声）：记住，任何情况下不得单独行动。</p>
+                                <p>小刘（吞咽声）：如果...如果走散了怎么办？</p>
+                                <p>杨姐（拉枪栓声）：对着通讯器唱国歌，我们会定位声波。</p>
+                                <p>张明（纸张撕裂声）：操作手册第47页被撕掉了？</p>
+                            
+                                <p>王哥（叹气）：那是故意销毁的，上次任务有人按流程自杀。</p>
+                                <p>小刘（吸气声）：杨姐你的防护服...背后在渗血？</p>
+                                <p>杨姐（拍打声）：菜鸟，那是压力传感器的反光。</p>
+                                <p>张明（突然惊叫）：我的指南针！指针在顺时针旋转！</p>
+                            
+                                <p>王哥（低吼）：关闭所有电子设备，三十秒强制传送！</p>
+                                <p>小刘（哭腔）：等等！我的应急氧气阀卡住了！</p>
+                                <p>杨姐（金属摩擦声）：用多功能钳逆时针转三圈半——</p>
+                                <p>[高频蜂鸣声撕裂空气]</p>
+                            
+                                <!-- 过渡段：空间折叠 -->
+                                <p>[持续12秒的耳鸣与布料剧烈抖动声]</p>
+                                <p>张明（失真尖叫）：我的眼睛！有光刺进——</p>
+                                <p>[玻璃容器落地破碎声]</p>
+                                
+                                <br>
+                                <!-- 章节2.1：黑暗降临 -->
+                                <p>[绝对寂静持续3秒]</p>
+                                <p>小刘（尖叫）：全黑！夜视仪也失效了！</p>
+                                <p>杨姐（喘息声）：抓住我的肩带，我正在摸探路绳。</p>
+                                <p>王哥（闷哼）：左侧墙壁温度正在急速下降！</p>
+                            
+                                <p>张明（咳嗽声）：空气成分...二氧化碳含量79%...</p>
+                                <p>小刘（抽泣）：有东西在我耳边吹气！有东西在！</p>
+                                <p>杨姐（喝斥）：那是通风系统的残留气流！</p>
+                                <p>[液体滴落声渐强]</p>
+                            
+                                <p>王哥（沉重呼吸）：发现门框！门把手...粘着胶状物...</p>
+                                <p>张明（颤抖声）：我的计时器...显示已经进来两小时了...</p>
+                                <p>杨姐（惊叫）：不可能！我的生命监测才启动九分钟！</p>
+                                <p>[突然的绝对寂静持续7秒]</p>
+
+                                <!-- 过渡段：门扉显现 -->
+                                <p>[指甲划过金属板的刺耳声]</p>
+                                <p>王哥（压低嗓音）：我摸到门缝了...有气流在往外渗</p>
+                                <p>小刘（抽泣）：是冷风！像冰箱打开的那种冷风！</p>
+                                <p>[三下沉重的金属撞击声]</p>
+
+                                <br>
+                                <!-- 章节2.2：光与雨 -->
+                                <p>[持续雨声中混杂电子杂音]</p>
+                                <p>王哥（压低声音）：货架间距三米列队，张明检测时间锚点。</p>
+                                <p>张明（仪器滴答声）：量子钟显示...我们正在五个时间点同时存在。</p>
+
+                                <p>杨姐（衣物摩擦声）：货箱标签是俄文，但二维码扫出来是淘宝链接。</p>
+                                <p>小刘（抽气声）：这箱罐头！生产日期是明年三月！</p>
+                                <p>[金属货架突然震颤]</p>
+
+                                <p>王哥（急促）：远离西侧门！门框正在虚化——</p>
+                                <p>杨姐（惊呼）：门外是星空！没有大气折射的原始星空！</p>
+                                <p>张明（咳嗽）：我的防护服...在自动注射镇静剂？</p>
+
+                                <p>[雨声骤然增强三倍]</p>
+                                <p>小刘（尖叫）：雨水在天花板倒流！</p>
+                                <p>王哥（枪械上膛声）：杨姐守住出口，张明找掩体！</p>
+                                <p>[玻璃罐连环爆裂声]</p>
+
+                                <!-- 空间异变前兆 -->
+                                <p>张明（失真尖叫）：我的影子！影子在抓我的脚！</p>
+                                <p>杨姐（喘息）：货架上的灰尘...组合成我们进来时的队形...</p>
+                                <p>[蜂鸣器发出十二音阶旋律]</p>
+
+                                <!-- 过渡至2.3：虚空之门 -->
+                                <p>王哥（吼叫）：全员抓住固定物！空间曲率突破临界——</p>
+                                <p>[混凝土粉碎声持续4秒]</p>
+                                <p>杨姐（绝望）：那扇门在吞噬货架！</p>
+                                <p>[突然的绝对寂静]</p>
+
+                                <p>小刘（哽咽）：张哥？王哥？你们在哪——</p>
+                                <p>[失重感杂音中响起八音盒音乐]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span style="font-family:Times New Roman,楷体;">《 <a href=".\Space_6.html">Space 6</a> | <b> p ce 7</b> | <a href=".\Space_8.html">Space 8</a> 》</span>
+                </fieldset>
+            </div>
+
+
+
+
+
+            <div id="doc1" style="display:none">
+                <header style="display:grid; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(1,1fr); background-color:white;"><a href="list.html" target="_self" style="color:red; text-decoration-line:none;">SRF</a></header>
+                <br>
+                <br>
+                <br>
+                <fieldset>
+                    <a href="./list.html">← return</a>
+                    <h1>Space 7</h1>
+                    <fieldset style="border-color:black; background-color:white; color:red">
+                        警告：此文档为SRF最高机密，请已授权人员验证身份。
+                    </fieldset>
+                    <br>
+
+                    <div class="password">
+                        <div id="doc1_password_page1" style="display: inline">
+                            <span style="font-size:25px">身份验证系统</span><br>
+                            <div style="text-align:center" class="password_line-height1">
+                                <div class="password_line-height2">
+                                    <input id="doc1_input_user" type="text" placeholder="用户名" class="password_input"><br>
+                                    <input id="doc1_input_password" type="password" placeholder="密码" class="password_input">
+                                </div>
+                                <button onclick="doc1_password_register_click()" class="password_register">登录</button>
+                            </div>
+                        </div>
+
+                        <div id="doc1_password_page2" style="display:none; font-size:25px" class="password_line-height3">
+                            验证通过<br>
+                            欢迎您，<span id="doc1_password_page2_name"></span>
+                        </div>
+                    </div>
+
+
+                    <div id="doc1_main_passage_level1" style="display:none;">
+                        
+                        <div  id="doc1_main_passage_level1_button_open" style="display:inline;">
+                            <button onclick="doc1_main_passage_level1_button_open()" class="doc1-main-passage-level1-button" style="font-size:15px;"> > 打开文档</button>
+                        </div>
+                        <div id="doc1_main_passage_level1_button_close" style="display:none;">
+                            <button onclick="doc1_main_passage_level1_button_close()" class="doc1-main-passage-level1-button" style="font-size:15px;">v 关闭文档</button>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="doc1_main_passage_level2" style="display:none;">
+                            <div class="Lb Lu">
+                                <span style="font-size:18px;">
+                                    安全等级:<br>
+                                    未定<br>
+                                </span>
+                                <br>
+                                <div class="item">
+                                    -不稳定<br>
+                                    -无实体<br>
+                                    -变化无常<br>
+                                </div> 
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="center-flex"><div>
+                        《 <a href=".\Space_6.html">Space 6</a> | <b> S a   7</b> | <a href=".\Space_8.html">Space 8</a> 》
+                    </div></div>
+                </fieldset>
+            </div>
+
+
+            <div>
+                <header style="display:grid; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(1,1fr); background-color:white;"><a href="list.html" target="_self" style="color:red; text-decoration-line:none;">SRF</a></header>
+                <div class="makeCentered" id="doc2" style="display:none">
+                    <div class="warning">
+                    <span style="font-size:36px;">警告！此页面不存在！</span><br>
+                    <span style="font-size:26px;">该页面已被删除或阻挡，你可以尝试:</span><br>
+                    <button onclick="location.reload();" class="refreshButton">[刷新网页]</button>
+                </div>
+            </div>
+        </div></div>
+    </body>
+    <script>
+    const debug=-1;
+    var showDoc=Math.floor(Math.random()*11);
+    if (debug!=-1) showDoc=debug;
+    if (showDoc==0)
+    {
+        document.getElementById("doc0").style="display:inline";
+        document.getElementById("global").style="background-color:rgb(24, 24, 24); color:white";
+    }
+    if (showDoc==1)
+    {
+        document.getElementById("doc1").style="display:inline";
+    }
+    if (2<=showDoc && showDoc<=8)
+    {
+        document.getElementById("doc2").style="display:inline";
+        //document.getElementById("global").style="background-color:white; color:black";
+    }
+    if (9<=showDoc && showDoc<=11)
+    {
+        document.getElementById("doc2").style="display:inline";
+        document.getElementById("global").style="background-color:rgb(24, 24, 24); color:white";
+    }
+
+
+    var password_name="";
+    var password_password="";
+    function doc0_password_register_click()
+    {
+        if (document.getElementById("doc0_input_user").value === "") alert("请输入用户名");
+        else if (document.getElementById("doc0_input_password").value === "") alert("请输入密码");
+        else
+        {
+            document.getElementById("doc0_password_page2_name").innerHTML = document.getElementById("doc0_input_user").value;
+            document.getElementById("doc0_password_page1").style = "display: none";
+            document.getElementById("doc0_password_page2").style = "display:inline; font-size:25px";
+            document.getElementById("doc0_main_passage_level1").style = "display:inline;";
+        }
+    }
+    function doc0_main_passage_level1_button_open()
+    {
+        document.getElementById("doc0_main_passage_level1_button_open").style = "display:none;";
+        document.getElementById("doc0_main_passage_level1_button_close").style = "display:inline;";
+        document.getElementById("doc0_main_passage_level2").style = "display:inline;";
+    }
+    function doc0_main_passage_level1_button_close()
+    {
+        document.getElementById("doc0_main_passage_level1_button_open").style = "display:inline;";
+        document.getElementById("doc0_main_passage_level1_button_close").style = "display:none;";
+        document.getElementById("doc0_main_passage_level2").style = "display:none;";
+    }
+    function doc1_password_register_click()
+    {
+        if (document.getElementById("doc1_input_user").value === "") alert("请输入用户名");
+        else if (document.getElementById("doc1_input_password").value === "") alert("请输入密码");
+        else
+        {
+            document.getElementById("doc1_password_page2_name").innerHTML = document.getElementById("doc1_input_user").value;
+            document.getElementById("doc1_password_page1").style = "display: none";
+            document.getElementById("doc1_password_page2").style = "display:inline; font-size:25px";
+            document.getElementById("doc1_main_passage_level1").style = "display:inline;";
+        }
+    }
+    function doc1_main_passage_level1_button_open()
+    {
+        document.getElementById("doc1_main_passage_level1_button_open").style = "display:none;";
+        document.getElementById("doc1_main_passage_level1_button_close").style = "display:inline;";
+        document.getElementById("doc1_main_passage_level2").style = "display:inline;";
+    }
+    function doc1_main_passage_level1_button_close()
+    {
+        document.getElementById("doc1_main_passage_level1_button_open").style = "display:inline;";
+        document.getElementById("doc1_main_passage_level1_button_close").style = "display:none;";
+        document.getElementById("doc1_main_passage_level2").style = "display:none;";
+    }
+    </script>
+</html>
+

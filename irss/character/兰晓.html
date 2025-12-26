@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRSS维基 | 兰晓</title>
+    <link rel="stylesheet" href="../../file/common-style.css">
+</head>
+<body>
+    <header id="general-header"></header>
+    <br><br><br>
+    <div class="center-flex"><fieldset class="doc_common-width">
+        <legend>文档</legend>
+        <h1>兰晓</h1>
+        <a href="index.html">返回</a>
+        <br><br>
+        <fieldset>
+            <legend>描述</legend>
+            <div class="markdown">
+                兰晓外表安静内敛，内心藏着敏感与执拗的矛盾体。
+                她习惯用沉默包裹自己，对周遭的细微变化有着超乎常人的感知力，却不擅长主动表达，
+                更像一个 “生活的观察者”，把情绪和想法都压在心底。
+                
+                她对日常的繁琐规则、旁人的闲言碎语有些迟钝，总能沉浸在自己的小世界里；
+                但对情绪的暗流、环境的违和感格外敏锐 —— 一束错位的光、一句反常的话、一阵莫名的沉默，
+                都能在她心里掀起波澜，只是她从不会轻易表露。
+                
+                平时看起来温顺、随遇而安，好像对一切都无所谓，被命运推着走也不会反抗；
+                可一旦触及心底认定的事，就会生出一股近乎固执的韧劲。哪怕前路迷茫，哪怕无人理解，
+                也会咬着牙走下去，这份执拗，藏在她看似柔软的骨子里。
+                
+                她天生带着一点疏离感，不喜欢拥挤的热闹，更偏爱独处时的安静；
+                但又悄悄渴望着真切的联结 —— 一份懂她的陪伴，一个可以安心停靠的 “角落”。
+                这种对孤独的依赖和对归属的渴望，让她常常在 “自我封闭” 与 “悄悄靠近” 之间徘徊。
+                
+                她渴望看清事物的本质，也渴望找到属于自己的 “确定性”—— 无论是对世界的认知，还是对自我的定位。
+                她不满足于浮于表面的答案，总在潜意识里追寻着某种 “真相”，哪怕这个过程会让她陷入迷茫与痛苦。
+                
+                她喜欢发呆，常常对着一个事物出神，脑子里却在翻涌着各种细碎的念头；
+                她擅长拒绝别人，哪怕心里不情愿，也会点头答应，事后再默默消化情绪；
+                她对熟悉的事物有很强的执念，比如一个旧玩具、一首老曲子，这些东西会成为她对抗不安的 “锚点”。
+            </div>
+        </fieldset>        
+        <fieldset>
+            <legend>故事</legend>
+            <a href="../story/未醒.html">未醒</a> <br />
+            <a href="../story/离家.html">离家</a> <br />
+            <a href="../story/天台.html">天台</a> <br />
+        </fieldset>
+        <br />
+        <fieldset>
+            <a href="javascript:void(0)" onclick="showImg();" id="imgButton">点击查看图片</a>
+            <div style="display:none;" id="imgDiv">
+                <div style="border-width:1px; border-style:solid; text-align:center;">
+                    <img src="file/兰晓/兰晓.png" alt="图片无法加载" height="400px">
+                </div>
+            </div>
+        </fieldset>
+    </div></fieldset>
+</body>
+<script src="../../file/base.js"></script>
+<script src="../../file/marked.min.js"></script>
+<script>
+	general_init("../..");
+    imgDiv=document.getElementById('imgDiv');
+    imgButton=document.getElementById('imgButton');
+    function showImg()
+    {
+        imgDiv.style="display:block;";
+        imgButton.onclick=hideImg;
+        imgButton.textContent="点击隐藏图片";
+    }
+    function hideImg()
+    {
+        imgDiv.style="display:none;";
+        imgButton.onclick=showImg;
+        imgButton.textContent="点击显示图片";
+    }
+</script>
+</html>
+
+<!--
+初中时与家中与父母疏离，父母慢不关心
+与学校同学关系差
+多次目睹父母吵架
+-->

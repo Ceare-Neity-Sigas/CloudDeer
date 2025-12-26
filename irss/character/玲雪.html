@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRSS维基 | 玲雪</title>
+    <link rel="stylesheet" href="../../file/common-style.css">
+</head>
+<body>
+    <header id="general-header"></header>
+    <br><br><br>
+    <div class="center-flex"><fieldset class="doc_common-width">
+        <legend>文档</legend>
+        <h1>玲雪</h1>
+        <a href="index.html">返回</a>
+        <br><br>
+        <fieldset>
+            <legend>描述</legend>
+            <div class="markdown">
+                玲雪的人生，前半段是从云端跌落泥泞的轨迹。她曾生于优渥之家，锦衣玉食的日子里，
+                父母的和睦与弟弟的陪伴，是她童年最温暖的底色。可家道中落的变故，像一场猝不及防的暴雨，
+                浇灭了生活里的所有光亮。父母的争吵成了家常便饭，曾经温馨的家变得支离破碎，
+                唯有和弟弟相互依偎的时光，能让她在窒息的压抑里寻得一丝喘息的缝隙。
+                
+                变故之后，她转入了一所普通中学。巨大的落差让她无所适从，无心应付课本上的铅字，
+                也无力融入陌生的环境。同学的排挤如影随形，老师的鄙夷像针一样扎在心上，
+                她成了教室里最沉默的影子，把自己蜷缩在无人在意的角落。
+                
+                父母离婚的判决，成了压垮她的最后一根稻草。她跟着父亲，弟弟跟着母亲，
+                曾经最坚实的精神支柱，被硬生生拆开。就在她坠入人生最黑暗的谷底时，一位神秘人的指点，
+                如一道微光刺破阴霾。她像是抓住了救命稻草般开始埋头苦读，将所有的委屈、不甘与思念，
+                都化作了笔尖的力量。
+                
+                当成绩单上 “班级第一” 的字样映入眼帘时，周遭的目光终于变了。老师的态度从鄙夷转为赞许，
+                同学的排挤变成了敬佩，她终于在这片泥泞里，挣出了属于自己的一席之地，
+                与过往的隔阂悄然和解。
+                
+                可命运的齿轮，总在看似顺遂时转向未知。一次偶然，她误入了神秘的 [实验室]，
+                从此被卷入了全然陌生的 [第一集群]。在这片光怪陆离、危机四伏的天地里，她独自流浪了数日，
+                饥饿、恐惧与孤独轮番侵袭，几乎磨灭了她所有的勇气。
+                
+                就在她濒临绝望之际，“搜救者” 组织的分队找到了她。那些伸出援手的人，
+                成了她在第一集群里的新依靠。感念这份救赎之恩，也为了寻得一处安身之所，
+                更想在这片未知的天地里，找到属于自己的价值，玲雪毅然加入了搜救者分队。
+                
+                如今的她，褪去了曾经的迷茫与怯懦。鎏金瞳孔里，多了几分坚定与果敢，银白的发间，
+                偶尔会别上分队的徽章。她不再是那个蜷缩在角落的少女，而是搜救者中一员，以少年之身，
+                在第一集群的迷雾里，循着微光前行，也学着为他人点亮一盏灯。
+            </div>
+        </fieldset>        
+        <fieldset>
+            <legend>故事</legend>
+            <a href="../story/阴霾的日常.html">阴霾的日常</a> <br />
+            <a href="../story/空座位.html">空座位</a> <br />
+            <a href="../story/暗巷.html">暗巷</a> <br />
+        </fieldset>
+        <br />
+        <fieldset>
+            <a href="javascript:void(0)" onclick="showImg();" id="imgButton">点击查看图片</a>
+            <div style="display:none;" id="imgDiv">
+                <div style="border-width:1px; border-style:solid; text-align:center;">
+                    <img src="file/玲雪/玲雪.png" alt="图片无法加载" height="400px">
+                </div>
+            </div>
+        </fieldset>
+    </div></fieldset>
+</body>
+<script src="../../file/base.js"></script>
+<script src="../../file/marked.min.js"></script>
+<script>
+	general_init("../..");
+    imgDiv=document.getElementById('imgDiv');
+    imgButton=document.getElementById('imgButton');
+    function showImg()
+    {
+        imgDiv.style="display:block;";
+        imgButton.onclick=hideImg;
+        imgButton.textContent="点击隐藏图片";
+    }
+    function hideImg()
+    {
+        imgDiv.style="display:none;";
+        imgButton.onclick=showImg;
+        imgButton.textContent="点击显示图片";
+    }
+</script>
+</html>
+
+<!--
+小时家庭富裕，后家道中落。父母关系恶化，与以其弟互为精神支柱。
+转入普通中学，无心学习。受同学排挤，受老师鄙夷。
+后父母离婚，玲雪跟爸而其弟跟妈，与最黑暗之时受神秘人指点开始努力学习，
+最后考得班级第一，与老师、同学和解，然一日偶落入[实验室]，后进入[第一集群]，多日流浪后被“搜救者”所救，遂加入。
+-->

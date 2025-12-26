@@ -1,0 +1,68 @@
+.level-border{
+    font-size:20px;
+    font-family:黑体;
+    border-style:solid;
+    border-width:2px;
+    border-color:black;
+    width:400px;
+    padding:5px;
+}
+.level-0{
+    color:chartreuse;
+    background-image:linear-gradient(70deg,green,chartreuse);
+}
+.level-1{
+    color:rgb(255, 255, 255);
+    background-image:linear-gradient(70deg,rgb(164, 164, 164),rgb(255, 255, 255));
+}
+.level-2{
+    color:rgb(255, 201, 25);
+    background-image:linear-gradient(70deg,rgb(77, 25, 11),rgb(255, 201, 25));
+}
+.level-3{
+    color:rgb(255, 25, 25);
+    background-image:linear-gradient(70deg,rgb(45, 0, 0),rgb(255, 25, 25));
+}
+.level-4{
+    color:rgb(109, 33, 129);
+    background-image:linear-gradient(70deg,rgb(32, 0, 40),rgb(78, 0, 97));
+}
+.level-unkown{
+    color:rgb(0, 0, 0);
+    background-image:linear-gradient(70deg,rgb(155, 155, 155),rgb(0, 0, 0));
+}
+.level-item{
+    font-size:14px;
+    line-height:100%;
+}
+.picture-border
+{
+    border-width:1px;
+    border-style:solid;
+    background-color:#a06800;
+    width:200px;
+    text-align:center;
+    color:white;
+    border-color:black;
+}
+fieldset
+{
+    border-width:1px;
+    border-color:black;
+    padding:2px;
+}
+header
+{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    font-size:23px;
+    background-color:white;
+    border-style:solid;
+	border-left-style:none;
+	border-right-style:none;
+	border-top-style:none;
+    border-width:1px;
+    padding:5px;
+}

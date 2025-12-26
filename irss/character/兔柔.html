@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRSS维基 | 兔柔</title>
+    <link rel="stylesheet" href="../../file/common-style.css">
+</head>
+<body>
+    <header id="general-header"></header>
+    <br><br><br>
+    <div class="center-flex"><fieldset class="doc_common-width">
+        <legend>文档</legend>
+        <h1>兔柔</h1>
+        <a href="index.html">返回</a>
+        <br><br>
+        <fieldset>
+            <legend>描述</legend>
+            <div class="markdown">
+                ???
+            </div>
+        </fieldset>        
+        <fieldset>
+            <legend>故事</legend>
+            <a href="../story/好大哥.html">好大哥</a> <br />
+        </fieldset>
+        <br />
+        <fieldset>
+            <a href="javascript:void(0)" onclick="showImg();" id="imgButton">点击查看图片</a>
+            <div style="display:none;" id="imgDiv">
+                <div style="border-width:1px; border-style:solid; text-align:center;">
+                    <img src="file/兔柔/兔柔.png" alt="图片无法加载" height="400px">
+                </div>
+            </div>
+        </fieldset>
+    </div></fieldset>
+</body>
+<script src="../../file/base.js"></script>
+<script src="../../file/marked.min.js"></script>
+<script>
+	general_init("../..");
+    imgDiv=document.getElementById('imgDiv');
+    imgButton=document.getElementById('imgButton');
+    function showImg()
+    {
+        imgDiv.style="display:block;";
+        imgButton.onclick=hideImg;
+        imgButton.textContent="点击隐藏图片";
+    }
+    function hideImg()
+    {
+        imgDiv.style="display:none;";
+        imgButton.onclick=showImg;
+        imgButton.textContent="点击显示图片";
+    }
+</script>
+</html>
+
+<!--
+-->
