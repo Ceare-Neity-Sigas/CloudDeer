@@ -1,0 +1,32 @@
+.code
+{
+    white-space: nowrap;
+    font-family:"Courier New","新宋体";
+    background:#404040;
+    border-style:dotted;
+    border-color:white;
+    color:white;
+    border-width:1px;
+    width:max-content;
+    max-width:100%;
+    padding:3px;
+    overflow-x:auto;
+    display:block;
+    white-space: nowrap;
+}
+
+.code-inline
+{
+    display: inline-flex;      /* 允许外部文本环绕 */
+    align-items: center; 
+    font-family:"Courier New","新宋体";
+    background:#404040;
+    border-style:dotted;
+    border-color:white;
+    color:white;
+    border-width:1px;
+    padding:3px;
+    width:max-content;
+    max-width:100%;
+    overflow-x:auto;
+}

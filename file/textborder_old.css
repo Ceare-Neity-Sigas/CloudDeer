@@ -1,0 +1,25 @@
+.textborder{
+    border-style:solid;
+    border-color:black;
+    background-color:rgb(190, 190, 190);
+    border-width:1px;
+    font-family:"Times New Roman","楷体";
+    padding:5px;
+    width:500px;
+}
+.textborderb{
+    font-family:"Times New Roman","楷体";
+    width:500px;
+}
+.textborder_2{
+    border-style:solid;
+    border-color:black;
+    background-color:rgb(255, 255, 255);
+    border-width:1px;
+    padding:5px;
+    width:500px;
+}
+p{
+    width:500px;
+    text-indent:32px;
+}

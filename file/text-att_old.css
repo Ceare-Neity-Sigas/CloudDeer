@@ -1,0 +1,54 @@
+.text-att_default
+{
+    font-family:"Times New Roman","新宋体";
+}
+.text-att_kaiti
+{
+    font-family:"Candara","楷体";
+}
+.text-att_heiti
+{
+    font-family:"黑体";
+}
+.text-att_default-textborder
+{
+    border-style:solid;
+    border-width:1px;
+    padding:5px;
+    width:500px;
+}
+.text-att_default-textborder_black-bg
+{
+    border-style:solid;
+    border-width:1px;
+    padding:5px;
+    width:500px;
+    color:white;
+    border-color:white;
+    background-color:black;
+}
+.text-att_default-textborder_white-bg
+{
+    border-style:solid;
+    border-width:1px;
+    padding:5px;
+    width:500px;
+    color:black;
+    border-color:black;
+    background-color:white;
+}
+p.text-att_default-textborder
+{
+    width:500px;
+    text-indent:32px;
+}
+p.text-att_default-textborder_black-bg
+{
+    width:500px;
+    text-indent:32px;
+}
+p.text-att_default-textborder_white-bg
+{
+    width:500px;
+    text-indent:32px;
+}

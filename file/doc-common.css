@@ -1,0 +1,13 @@
+*
+{
+    font-family:Times New Roman,新宋体;
+}
+p
+{
+    word-wrap:break-word;
+    text-indent:32px;
+}
+.doc_common-width
+{
+    width:500px;
+}
