@@ -13,6 +13,7 @@ body
     color:white;
     font-family:
     "Times New Roman","新宋体";
+    text-shadow: black 1px 1px;
 }
 header
 {
@@ -28,11 +29,30 @@ header
 	border-top-style:none;
     border-width:1px;
     padding:5px;
+    border-color:royalblue;
 }
 a
 {
     color:aquamarine;
     text-decoration-line:none;
+    transition: color 0.15s ease;
+}
+a:hover {
+  color: red; /* 悬浮时的颜色 */
+}
+.text-button
+{
+    color:aquamarine;
+    text-decoration-line:none;
+    transition: color 0.15s ease;
+    border-style:none;
+    background-color:rgba(0,0,0,0);
+    font-family: "Times New Roman","新宋体";
+    font-size:medium;
+    text-shadow: black 1px 1px;
+}
+.text-button:hover {
+  color: red; /* 悬浮时的颜色 */
 }
 p
 {
@@ -42,8 +62,44 @@ p
 table{
     border-style:solid;
     border-width:1px;
+    border-color:rgb(178, 197, 255);
 }
 th{
     border-style:solid;
     border-width:1px;
+    border-color:royalblue;
+}
+button{
+    border-width:2px;
+    border-radius:4px;
+    border-color:royalblue;
+}
+legend{
+    background-color:rgba(0, 0, 0, 0.6);
+}
+fieldset{
+    border-width:1px;
+    border-color:royalblue;
+    background-color:rgba(0, 0, 0, 0.6);
+}
+code{
+    font-family:Consolas;
+    border-style:solid;
+    border-width:1px;
+    padding:2px;
+    margin:2px;
+    border-radius:4px;
+    line-height: 150%;
+    background-color:rgba(45, 45, 45, 0.7);
+    border-color:royalblue;
+}
+button{
+    border-width:2px;
+    border-radius:4px;
+    background-color:rgba(45, 45, 45, 0.7);
+    border-color:royalblue;
+    color:white;
+}
+hr{
+    border-color:royalblue;
 }
